@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>SeqVis II</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="shortcut icon" type="image/x-icon" href="./image/logo.png" />
+		<link rel="stylesheet" href="css/landingPage.css">
+		<link href="css/main.css" rel="stylesheet" />
+		
+		<link id="theme" href="css/dark.css" rel="stylesheet" />
+		
+	</head>
+	<body >
+
+	
+		<script src="js/libs/decimalAdjustment.js"></script>
+		<script src="js/libs/FileSaver.js"></script>
+		<script src="js/libs/Tween.js"></script>
+		<script src="js/libs/three.js"></script>
+		<script src="js/libs/SVGRenderer.js"></script>
+		<script src="js/libs/Projector.js"></script>
+		<script src="js/libs/jszip.js"></script>
+		<script src="js/libs/three.meshline.js"></script>
+		<script src='js/libs/LineSegmentsGeometry.js'></script>
+		<script src='js/libs/LineMaterial.js'></script>
+		<script src='js/libs/LineSegments2.js'></script>
+	
+		<script src="js/libs/signals.min.js"></script>
+		<script src="js/libs/ui.js"></script>
+		<script src="js/libs/ui.three.js"></script>
+		<script src="js/libs/d3.min.js"></script>
+
+
+		<script src="js/CoodinateConvertion.js"></script>
+		<script src="js/Config.js"></script>
+		<script src="js/Command.js"></script>
+		<script src="js/data.js"></script>
+		<script src="js/Editor.js"></script>
+		<script src="js/FileLoader.js"></script>
+		<!-- <script src="js/History.js"></script> -->
+		<script src="js/Menubar.js"></script>
+		<script src="js/Menubar.File.js"></script>
+		<script src="js/Menubar.Help.js"></script>
+
+		<script src="js/Toolbar.js"></script>
+		<script src="js/Viewport.js"></script>
+		<script src='js/controls/OrbitControls.js'></script>
+
+		<script src="js/Sidebar.js"></script>
+		<script src="js/Sidebar.View.js"></script>
+		<script src="js/Sidebar.Plot.js"></script>
+		<script src="js/Sidebar.Settings.js"></script>
+
+		<script src="js/MatchedPairsTest.js"></script>
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.1.1/math.js"></script>
+		<div class="landingPageContainer">
+ 
+			
+				<h1><span style="color:#3e8e41;font-size:50px">SeqVis 2.0</span>: Web-based visualisation of DNA compositional heterogeneity for phylogenetic analysis</h1>
+				<img src="./image/logo.gif">
+				
+			   
+				<div class="file">
+					<input id='uploadField' type='file' style='display:none' accept=".nex, .fasta, .phy">
+		
+					<button id='uploadButton' class="upload">Upload data</button>
+				  
+					<button  id='demoButton' class="demo">Demo</button>
+		   
+				</div>
+			 
+		</div>
+		<script>
+
+			var demoButton = document.querySelector('#demoButton');
+			var uploadField = document.querySelector('#uploadField');
+			var uploadButton = document.querySelector('#uploadButton');
+			uploadButton.onclick = function(){
+				uploadField.click();
+				
+			}
+			uploadField.onchange = function(evt) {
+
+				var inputFile = evt.target.files[0];
+				var reader = new FileReader();
+					
+				localStorage.setItem('file', inputFile);
+					
+				reader.onload = function(e) {
+					var type;
+					if(inputFile.name.match(/\.fasta/)){
+						type = 'fasta';
+					}
+					else if(inputFile.name.match(/\.nex/)){
+						type = 'nex';
+					}
+					else if(inputFile.name.match(/\.phy/)){
+						type = 'phy';
+					}
+					fileType = type;
+					fileData = reader.result;  
+					document.querySelector('.landingPageContainer').style.display = "none";
+					init();
+				};         
+				reader.readAsText(inputFile);
+			}
+
+			demoButton.onclick = function(e){
+
+				document.querySelector('.landingPageContainer').style.display = "none";
+				init();
+			}
+			function init (){
+
+				window.URL = window.URL || window.webkitURL;
+				window.BlobBuilder = window.BlobBuilder || window.WebKitBlobBuilder || window.MozBlobBuilder;
+
+				const IS_MAC = navigator.platform.toUpperCase().indexOf( 'MAC' ) >= 0;
+
+				Number.prototype.format = function (){
+					return this.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+				};
+
+				var textureloader = new THREE.TextureLoader();
+				var fontLader = new THREE.FontLoader();
+				textureloader.load( './image/disc.png', function( texture ) {
+					Config.dataTexture = texture;
+					fontLader.load( './fonts/helvetiker_regular.typeface.json', function ( font ) {
+						Config.font = font;
+						Config.dataTexture = texture;
+						console.log('loaded');
+						var editor = new Editor();
+
+						var menubar = new Menubar( editor );
+						document.body.appendChild( menubar.dom );	
+			
+						var viewport = new Viewport( editor );
+
+						var loadFile  = new FileLoader(editor);
+						
+						var sidebar = new Sidebar( editor );
+						document.body.appendChild( sidebar.dom );
+			
+						var toolbar = new Toolbar(editor);
+						document.body.appendChild(toolbar.dom);
+
+						var matchedPairsTest = new MatchedPairsTest(editor);
+			
+						function onWindowResize( event ) {
+			
+						editor.signals.windowResize.dispatch();
+			
+						}
+			
+						window.addEventListener( 'resize', onWindowResize, false );
+			
+						onWindowResize();
+					});
+				}, false );
+
+			}
+		</script>
+
+
+	</body>
+</html>

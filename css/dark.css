@@ -1,0 +1,388 @@
+button {
+	color: #d4d4d4;
+	background-color: #333;
+	border: 0px;
+	padding: 5px 8px;
+	/* text-transform: uppercase; */
+	cursor: pointer;
+	outline: none;
+	background-size: 100% 100%;
+}
+
+	button:hover {
+		color: #ccc;
+		background-color: #555;
+	}
+
+	button.selected {
+		color: #fff;
+		background-color: #365a79;
+	}
+
+input, textarea {
+	background-color: #333;
+	border: 1px solid transparent;
+	color: #d4d4d4;
+}
+
+input.Number {
+	color: #08f!important;
+	font-size: 12px;
+	border: 0px;
+	padding: 2px;
+	cursor: col-resize;
+}
+
+select {
+	color: #d4d4d4;
+	background-color: #333;
+	border: 0px;
+	/* text-transform: uppercase; */
+	cursor: pointer;
+	outline: none;
+}
+
+	select:hover {
+		color: #ccc;
+		background-color: #555;
+	}
+
+/* UI */
+
+
+#script {
+	position: absolute;
+	top: 32px;
+	left: 0;
+	right: 300px;
+	bottom: 32px;
+	opacity: 0.9;
+}
+
+#player {
+	position: absolute;
+	top: 32px;
+	left: 0;
+	right: 300px;
+	bottom: 32px;
+}
+
+#menubar {
+	position: absolute;
+	width: 100%;
+	height: 32px;
+	z-index:  999;
+	background: #222;
+	padding: 0;
+	margin: 0;
+	right: 0;
+	top: 0;
+}
+
+	#menubar .menu {
+		float: left;
+		cursor: pointer;
+		padding-right: 8px;
+	}
+
+	#menubar .menu.right {
+		float: right;
+		cursor: auto;
+		padding-right: 0;
+		text-align: right;
+	}
+
+		#menubar .menu .title {
+			display: inline-block;
+			color: #d4d4d4;
+			margin: 0;
+			padding: 8px;
+		}
+
+		#menubar .menu .options {
+			position: fixed;
+			display: none;
+			padding: 5px 0;
+			background: #222;
+			width: 150px;
+			max-height: calc(100% - 80px);
+			overflow: auto;
+		}
+
+		#menubar .menu:hover .options {
+			display: block;
+		}
+
+			#menubar .menu .options hr {
+				border-color: #333;
+			}
+
+			#menubar .menu .options .option {
+				color: #d4d4d4;
+				background-color: transparent;
+				padding: 5px 10px;
+				margin: 0 !important;
+			}
+
+				#menubar .menu .options .option:hover {
+					color: #fff;
+					background-color: #555;
+				}
+
+				#menubar .menu .options .option:active {
+					background: transparent;
+				}
+
+		#menubar .menu .options .inactive {
+			color: #555;
+			background-color: transparent;
+			padding: 5px 10px;
+			margin: 0 !important;
+		}
+
+
+#sideToggle{ display:none; }  
+#sideToggle:checked ~ #sidebar{ right:-25em; }  
+/* #sideToggle:checked ~ #wrap{ padding-right:220px;  }   */
+#wrap{ 
+
+	/* margin-right:30px;  */
+
+	transition:0.25s ease-out; 
+	-webkit-transition:0.25s ease-out; 
+	z-index:999;
+}  
+	#wrap > label{ display:inline-block; }  
+	#wrap > label{   
+		background:#222;  
+		border: 0px;
+		color: #FFF;  
+		cursor: pointer;  
+		display: block;  
+		font-family: Courier New;  
+		/* font-size: 25px;   */
+		font-weight: bold;  
+		width: 32px;
+		height: 32px;
+		line-height: 35px;
+		text-align: center;  
+		text-shadow: 0 -4px;  
+		z-index: 99999;
+	}  
+	#wrap > label:hover{ background:#555; }  
+
+	
+
+#sidebar {
+
+	background-color: #222;
+	position:absolute; 
+    top:32px; 
+    bottom:0; 
+    right:0; 
+    width:25em; 
+	overflow: auto;
+    transition:0.2s ease-out; 
+	-webkit-transition:0.2s ease-out;
+	z-index: 999;
+}
+
+	#sidebar * {
+		vertical-align: middle;
+	}
+
+	#sidebar .Panel {
+		color: #d4d4d4;
+		padding: 10px;
+		border-top: 1px solid #333;
+	}
+
+	#sidebar .Panel.collapsed {
+		margin-bottom: 0;
+	}
+
+	#sidebar .Panel.Material canvas {
+		border: solid 1px #5A5A5A;
+	}
+
+	#sidebar .Row {
+		min-height: 20px;
+		margin-bottom: 10px;
+	}
+
+#tabs {
+	background-color: #1b1b1b;
+	border-top: 1px solid #333;
+}
+
+	#tabs span {
+		color: #555;
+		border-right: 1px solid #333;
+		padding: 10px;
+
+	}
+
+	#tabs span.selected {
+		color: #d4d4d4;
+		background-color: #365a79;
+	}
+
+#toolbar {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 32px;
+	background-color: #222;
+	color: #333;
+}
+
+	#toolbar * {
+		vertical-align: middle;
+	}
+
+	#toolbar .Panel {
+		padding: 4px;
+		color: #d4d4d4;
+	}
+
+	#toolbar button {
+		margin-right: 6px;
+	}
+
+.Outliner {
+	color: #d4d4d4;
+	background: #333;
+	padding: 0;
+	width: 100%;
+	height: 140px;
+	font-size: 12px;
+	cursor: default;
+	overflow: auto;
+	outline: none;
+}
+
+	.Outliner .option {
+		padding: 4px;
+		white-space: nowrap;
+	}
+
+	.Outliner .option:hover {
+		background-color: rgba(21,60,94,0.5);
+	}
+
+
+	.Outliner .option.active {
+		background-color: rgba(21,60,94,1);
+	}
+
+
+
+
+
+	* {
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+	body {
+		color: #000;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 14px;
+		background-color: #fff;
+		margin: 0px;
+	}
+	#info {
+		position: absolute;
+		top: 0px; width: 100%;
+		padding: 5px;
+		text-align:center;
+	}
+	#content {
+		/* text-align:center; */
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right:25em;
+		/* align-content: center; */
+		/* width :100%; */
+		bottom: 32px;
+		z-index: 1;
+		padding: 3em 0 0 0;
+		overflow:auto;
+
+	}
+	a {
+		color: #0080ff;
+	}
+	#c {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.list-item {
+		display: inline-block;
+		margin: auto;
+		padding: 0.25em;
+		box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.25);
+
+	
+	}
+	.list-item .scene:before{
+		content: "";
+		display: inline-block;
+		padding-top: 100%;
+	}
+	.list-item .scene {
+		width: 100%;
+		height: 100%;
+	}
+
+	.list-item .foot {
+		display: table;
+		table-layout: fixed;
+		border-spacing: 5px;
+		width: 100%;
+		display: flex;
+
+		justify-content: space-between;
+		/* max-width: 400px; */
+		margin: 0 auto;
+		margin-top: 5px;
+	}
+
+	.list-item .foot .description {
+		/* color: #d4d4d4; */
+		font-family: sans-serif;
+		font-size: medium;
+		
+		/* display: table-cell; */
+		/* width: 50%; */
+		/* top:10px; */
+	}
+
+	.list-item .foot .optionButton {
+		background-color: transparent;
+		border: none;
+		/* color:  #d4d4d4; */
+		font-family: sans-serif;
+		font-size: medium;
+		cursor: pointer;
+		width: 1.25em;
+		height: 1.25em;
+		background-size: 1.25em 1.25em;
+	
+		/* display: table-cell; */
+	}
+	.list-item .foot .closeButton {
+		background-color: transparent;
+		border: none;
+		/* color:  #d4d4d4; */
+		font-family: Garamond, "Apple Garamond";
+
+		cursor: pointer;
+		/* display: table-cell; */
+	}
+	.list-item .foot > button:hover {
+		   background-color: #d4d4d4;
+	}
