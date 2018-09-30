@@ -52,7 +52,7 @@ https://vccri.github.io/SeqVis/
 
 ![image](/image/readme_pics/matchedPairTest.png?raw=true)
 |:--:| 
-| *Fig. 4. SeqVis's lower dimensional view. SeqVis can project and visualize the alignment in lower dimensions (e.g. de Finetti plot and linear plot). User can choose which nucleotides to be pooled together from the user interface.* |
+| *Fig. 5. Doing Match-pairs test by clicking the 'MPT' button, the result is automically downloaded.* |
 
 * On-screen images may be saved in the PNG and SVG formats.
 
