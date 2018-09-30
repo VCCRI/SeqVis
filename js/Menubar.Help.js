@@ -19,8 +19,7 @@ Menubar.Help = function ( editor ) {
 	option.setClass( 'option' );
 	option.setTextContent( 'About' );
 	option.onClick( function () {
-
-
+		window.open( 'https://github.com/VCCRI/SeqVis/tree/master', '_blank' );
 	} );
 	options.add( option );
 

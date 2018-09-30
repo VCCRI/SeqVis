@@ -935,7 +935,7 @@ Editor.prototype = {
 		// CREATE PERSPECTIVE CAMERA
 		var camera = new THREE.PerspectiveCamera( 50, 1);
 		camera.position.x = 0;
-		camera.position.z = 500;
+		camera.position.z = 550;
 		scene.userData.camera = camera;
 		camera.aspect = dom.offsetWidth / dom.offsetHeight;
 		camera.updateProjectionMatrix();
