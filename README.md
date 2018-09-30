@@ -44,7 +44,7 @@ https://vccri.github.io/SeqVis/
 
 * By projection, the tetrahedron can be illustrated as a de Finetti plot or a linear plot.
 
-![image](/image/readme_pics/differentPlot.png?raw=true)
+![image](/image/readme_pics/differentPlots.png?raw=true)
 |:--:| 
 | *Fig. 4. SeqVis's lower dimensional view. SeqVis can project and visualize the alignment in lower dimensions (e.g. de Finetti plot and linear plot). User can choose which nucleotides to be pooled together from the user interface.* |
 
