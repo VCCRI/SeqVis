@@ -52,9 +52,13 @@ https://vccri.github.io/SeqVis/
 
 ![image](/image/readme_pics/matchedPairTest.png?raw=true)
 |:--:| 
-| *Fig. 5. Doing Match-pairs test by clicking the 'MPT' button, the result is automically downloaded.* |
+| *Fig. 5. Match pair test are performed by clicking the MPT button. The result is then automatically dowloaded as a CSV file.* |
 
 * On-screen images may be saved in the PNG and SVG formats.
+
+![image](/image/readme_pics/screenPrint.svg)
+|:--:| 
+| *Fig. 6. A SVG format screenshot captued by SeqVis.* |
 
 ## Contact
 
