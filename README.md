@@ -26,13 +26,33 @@ https://vccri.github.io/SeqVis/
 
 * The tetrahedron can be rotated in all directions, animated, and manipulated interactively; all items (i.e., wireframe, axes, labels, level, point, and background) on display can be changed (e.g., colour, size, and visibility).
 
+![image](/image/readme_pics/differentDisplay.png?raw=true)
+|:--:| 
+| *Fig. 1. Examples of different styles of visualization in SeqVis. Visibility and colour of visual items can be changed dynamically through the user interface* |
+
 * The nucleotide composition at the codon sites can be surveyed independently and visualized on a single canvas. This can help assessing the heterogeneity of nucleotide composition across the three codon sites.
+
+![image](/image/readme_pics/codonView.png?raw=true)
+|:--:| 
+| *Fig. 2. Codon view of an alignment of nucleotide sequences. The nucleotide compositions at first, second and third codon position are visualized using three tetrahedron model simultaneously on the same canvas. The three models can be animated together.* |
 
 * Sequence information can be obtained by mouse-clicking on points of interest or by using inbuilt tools that query the data based on the sequences’ names.
 
+![image](/image/readme_pics/search.png?raw=true)
+|:--:| 
+| *Fig. 3. Retrieving sequence information. Sequence can be searched by name and nucleotide content. The matching sequence(s) is(are) highlighted in a different colour. Details information about a sequence (i.e. name, nucleotide composition, sequence length, and number of unknown nucleotides) are displayed in the bottom text panel.* |
+
 * By projection, the tetrahedron can be illustrated as a de Finetti plot or a linear plot.
 
+![image](/image/readme_pics/differentPlot.png?raw=true)
+|:--:| 
+| *Fig. 4. SeqVis's lower dimensional view. SeqVis can project and visualize the alignment in lower dimensions (e.g. de Finetti plot and linear plot). User can choose which nucleotides to be pooled together from the user interface.* |
+
 * Matched-pairs test of symmetry analytical tool is provided.
+
+![image](/image/readme_pics/matchedPairTest.png?raw=true)
+|:--:| 
+| *Fig. 5. Doing Match-pairs test by clicking the 'MPT' button, the result is automically downloaded.* |
 
 * On-screen images may be saved in the PNG and SVG formats.
 
