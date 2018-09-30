@@ -25,6 +25,7 @@ https://vccri.github.io/SeqVis/
 * SeqVis reads and writes alignments in the sequential PHYLIP(.phy) format, the NEXUS(.nex) format, and the FASTA(.fasta) format.
 
 * The tetrahedron can be rotated in all directions, animated, and manipulated interactively; all items (i.e., wireframe, axes, labels, level, point, and background) on display can be changed (e.g., colour, size, and visibility).
+![Alt text](/image/readme_pics/differentDisplay.png?raw=true "Fig. 2. Examples of different styles of visualization in SeqVis. Visibility and colour of visual items can be changed dynamically through the user interface.")
 
 * The nucleotide composition at the codon sites can be surveyed independently and visualized on a single canvas. This can help assessing the heterogeneity of nucleotide composition across the three codon sites.
 
