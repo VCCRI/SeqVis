@@ -22,7 +22,7 @@ https://vccri.github.io/SeqVis/
 
 ### Features
 
-* SeqVis reads and writes alignments in the sequential PHYLIP(.phy) format, the NEXUS(.nex) format, and the FASTA(.fst) format.
+* SeqVis reads and writes alignments in the sequential PHYLIP(.phy) format, the NEXUS(.nex) format, and the FASTA(.fasta) format.
 
 * The tetrahedron can be rotated in all directions, animated, and manipulated interactively; all items (i.e., wireframe, axes, labels, level, point, and background) on display can be changed (e.g., colour, size, and visibility).
 
