@@ -20,6 +20,21 @@ There are many ways to survey alignments of nucleotides for evidence of composit
 
 https://vccri.github.io/SeqVis/
 
+### Features
+
+* SeqVis reads and writes alignments in the sequential PHYLIP(.phy) format, the NEXUS(.nex) format, and the FASTA(.fst) format.
+
+* The tetrahedron can be rotated in all directions, animated, and manipulated interactively; all items (i.e., wireframe, axes, labels, level, point, and background) on display can be changed (e.g., colour, size, and visibility).
+
+* The nucleotide composition at the codon sites can be surveyed independently and visualized on a single canvas. This can help assessing the heterogeneity of nucleotide composition across the three codon sites.
+
+* Sequence information can be obtained by mouse-clicking on points of interest or by using inbuilt tools that query the data based on the sequences’ names.
+
+* By projection, the tetrahedron can be illustrated as a de Finetti plot or a linear plot.
+
+* Matched-pairs test of symmetry analytical tool is provided.
+
+* On-screen images may be saved in the PNG and SVG formats.
 
 ## Contact
 
