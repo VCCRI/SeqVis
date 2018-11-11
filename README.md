@@ -1,6 +1,5 @@
-# SeqVis
-
-Visualization of compositional heterogeneity in large alignments of nucleotides
+<a href="url"><img src="image/logo.gif" align="left" height="100" alt="starmap"></a>
+# SeqVis: Visualization of compositional heterogeneity in large alignments of nucleotides
 
 ## Summary
 

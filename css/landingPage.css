@@ -9,40 +9,40 @@ html {
 
 .landingPageContainer{
   width: 100%;
+  /*margin-top: 20%;*/
   position: absolute;
-  height: 100%;
+  height:100%;
   text-align: center;
   font-family: "Playfair Display", Arial, serif;
   color: #111;
-
+  overflow:auto;
 
 }
+h1{
 
-h1.landingPage{
-
-  font-size: calc(100% + 1.5vw);
+  font-size: 45px;
   color: #fff;
-  top: 15%;
-  height: 20%;
-
+  margin-top: 50px;
+ 
 }
-
 h2{
 
   font-size: 50px;
 }
-.img{
-  background: url("../image/logo.gif") no-repeat center ;
-  background-size: 20%;
-  height: 40%;
+img{
 
-
+   width:400px;
 }
 
 .file{
 
+<<<<<<< HEAD
   margin-top: 5%;
 
+=======
+  /* margin-top: 100px; */
+  font-weight: normal;
+>>>>>>> master
 }
 
 .file>.upload{
@@ -50,17 +50,32 @@ h2{
 
   color:#fff;
   background-color: #30a705;
+<<<<<<< HEAD
+=======
+  font-size:20px;
+  height: 50px;
+  width: 200px;
+>>>>>>> master
   border: none;
   box-shadow: none;
-  font-size:  calc(50% + 1vw);
   border-radius: 10px;
 
 }
 .file>.demo{
   background: #fff;
   color: #111;
+<<<<<<< HEAD
   border: none;
   box-shadow: none;
   border-radius: 10px;
   font-size:  calc(50% + 1vw);
 }
+=======
+  font-size:20px;
+  height: 50px;
+  width: 100px;
+  border: none;
+  box-shadow: none;
+  border-radius: 10px;
+}
+>>>>>>> master
