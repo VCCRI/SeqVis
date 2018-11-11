@@ -9,17 +9,14 @@ html {
 }
 
 .landingPageContainer{
-  width: 90%;
+  width: 100%;
   /*margin-top: 20%;*/
   position: absolute;
-  top: 30%; left: 50%;
-  transform: translate(-50%,-50%);
-  /* width:50%; */
-  height: 50%;
+  height:100%;
   text-align: center;
   font-family: "Playfair Display", Arial, serif;
   color: #111;
-  
+  overflow:auto;
 
 }
 h1{
