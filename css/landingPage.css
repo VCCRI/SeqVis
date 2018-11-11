@@ -10,9 +10,7 @@ html {
 
 .landingPageContainer{
   width: 100%;
-
   position: absolute;
-
   height: 100%;
   text-align: center;
   font-family: "Playfair Display", Arial, serif;
@@ -20,18 +18,14 @@ html {
 
 
 }
-/* h1{
 
- 
-} */
 h1.landingPage{
 
-  
   font-size: calc(100% + 1.5vw);
   color: #fff;
   top: 15%;
   height: 20%;
-  /* z-index: 1000; */
+
 }
 
 h2{
@@ -42,7 +36,7 @@ h2{
   background: url("../image/logo.gif") no-repeat center ;
   background-size: 20%;
   height: 40%;
-  /* z-index: 900; */
+
 
 }
 
